@@ -1,0 +1,58 @@
+data:
+  train: data_prepared/train.parquet
+  val: data_prepared/val.parquet
+  test: data_prepared/test.parquet
+schema:
+  id_cols:
+  - StudentID
+  - №
+  regression_target: avg_mark
+  classification_target: is_fail
+  pass_mark: 50
+training:
+  seed: 42
+  device: auto
+  precision: amp
+  num_workers: 4
+  batch_size: 4096
+  max_epochs: 20
+  patience: 3
+models:
+  enabled:
+  - mlp_emb
+  - ft_transformer
+  - autoint
+  - deep_cross
+  - tabnet
+  mlp_emb:
+    hidden:
+    - 512
+    - 256
+    - 128
+    dropout: 0.15
+  ft_transformer:
+    d_token: 192
+    n_blocks: 3
+    n_heads: 8
+    dropout: 0.1
+    ffn_factor: 2.0
+  autoint:
+    d_token: 128
+    n_blocks: 3
+    n_heads: 8
+    dropout: 0.1
+  deep_cross:
+    deep_hidden:
+    - 512
+    - 256
+    cross_layers: 3
+    dropout: 0.1
+  tabnet:
+    n_d: 32
+    n_a: 32
+    n_steps: 5
+    gamma: 1.5
+    cat_emb_dim: 2
+    lr: 0.02
+    max_epochs: 150
+    patience: 20

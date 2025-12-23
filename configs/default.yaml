@@ -1,0 +1,76 @@
+project:
+  name: smartedu_benchmark
+  seed: 42
+paths:
+  xlsx_dir: ..
+  journal_xlsx: journal_data_2022.xlsx
+  students_xlsx: students_full.xlsx
+  demo_xlsx: Demographic Data.xlsx
+  internships_xlsx: internships.xlsx
+  pubs_xlsx: scientific_publications.xlsx
+  enrolled_xlsx: SubjectsEnrolled.xlsx
+schema:
+  auto_detect: true
+  journal_sheet: null
+  students_sheet: null
+  demo_sheet: null
+  internships_sheet: null
+  pubs_sheet: null
+  enrolled_sheet: null
+  student_id: null
+  subject: null
+  mark: null
+  term: null
+  academic_year: null
+dataset:
+  risk_threshold: 75.0
+  allowed_terms:
+  - 1
+  - 2
+  min_age: 15
+  max_age: 80
+split:
+  train_max_year: 2020
+  val_year: 2021
+  test_year: 2022
+models:
+  ridge_reg: true
+  logreg_clf: true
+  catboost_reg: true
+  catboost_clf: true
+  lightgbm_reg: true
+  lightgbm_clf: true
+  xgboost_reg: true
+  xgboost_clf: true
+  tabpfn_reg: false
+  tabpfn_clf: false
+  tabnet_reg: false
+  tabnet_clf: false
+training:
+  n_jobs: -1
+  catboost:
+    iterations: 2000
+    learning_rate: 0.05
+    depth: 8
+    early_stopping_rounds: 100
+    use_gpu: true
+  lightgbm:
+    n_estimators: 3000
+    learning_rate: 0.05
+    num_leaves: 63
+    subsample: 0.9
+    colsample_bytree: 0.9
+    reg_lambda: 1.0
+    early_stopping_rounds: 100
+    use_gpu: true
+  xgboost:
+    n_estimators: 4000
+    learning_rate: 0.05
+    max_depth: 8
+    subsample: 0.9
+    colsample_bytree: 0.9
+    reg_lambda: 1.0
+    early_stopping_rounds: 100
+    use_gpu: false
+reporting:
+  topk_percent: 0.05

@@ -1,0 +1,20 @@
+# Core
+numpy>=1.26
+pandas>=2.1
+openpyxl>=3.1
+pyyaml>=6.0
+scikit-learn>=1.4
+joblib>=1.3
+matplotlib>=3.8
+
+# Tree/GBDT (optional but recommended for strong tabular performance)
+catboost>=1.2
+lightgbm>=4.3
+xgboost>=2.0
+
+# Optional models (auto-skip if not installed)
+tabpfn>=0.1.10
+pytorch-tabnet>=4.1
+
+# Optional extras (auto-skip if not installed)
+tqdm>=4.66
