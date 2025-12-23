@@ -1,0 +1,12 @@
+| model          | task   | split   |      RMSE |       MAE |         R2 |   train_sec |   Accuracy |   F1 |       PosRate |         Brier |       ROC_AUC |        PR_AUC |   Recall@Top5% |   Recall@Top10% |
+|:---------------|:-------|:--------|----------:|----------:|-----------:|------------:|-----------:|-----:|--------------:|--------------:|--------------:|--------------:|---------------:|----------------:|
+| mlp_emb        | reg    | test    |   9.62335 |   7.93009 |  -0.475713 |     3.89336 | nan        |  nan | nan           | nan           | nan           | nan           |     nan        |      nan        |
+| mlp_emb        | cls    | test    | nan       | nan       | nan        |     1.78852 |   0.999568 |    0 |   0.000431992 |   0.000431994 |   0.000590938 |   0.000246963 |       0        |        0        |
+| ft_transformer | reg    | test    |  15.4948  |  14.0685  |  -2.82581  |    19.1799  | nan        |  nan | nan           | nan           | nan           | nan           |     nan        |      nan        |
+| ft_transformer | cls    | test    | nan       | nan       | nan        |     4.09167 |   0.999568 |    0 |   0.000431992 |   0.000431717 |   0.829519    |   0.00607471  |       0.571429 |        0.571429 |
+| autoint        | reg    | test    |  30.2307  |  29.2018  | -13.5629   |    16.3969  | nan        |  nan | nan           | nan           | nan           | nan           |     nan        |      nan        |
+| autoint        | cls    | test    | nan       | nan       | nan        |     3.4827  |   0.999568 |    0 |   0.000431992 |   0.000433984 |   0.994946    |   0.137683    |       1        |        1        |
+| deep_cross     | reg    | test    |  19.3322  |  18.0096  |  -4.95542  |     2.98548 | nan        |  nan | nan           | nan           | nan           | nan           |     nan        |      nan        |
+| deep_cross     | cls    | test    | nan       | nan       | nan        |     1.01271 |   0.999568 |    0 |   0.000431992 |   0.000437406 |   0.000238139 |   0.000246921 |       0        |        0        |
+| tabnet         | reg    | test    |   1.81255 |   1.27563 |   0.947648 |    33.4583  | nan        |  nan | nan           | nan           | nan           | nan           |     nan        |      nan        |
+| tabnet         | cls    | test    | nan       | nan       | nan        |     7.86887 |   0.999568 |    0 |   0.000431992 |   0.000431992 |   0.248503    |   0.000357508 |       0        |        0        |

@@ -1,42 +1,21 @@
-# --- must NOT upload (per your request) ---
-*.sh
-*.zip
-
-# --- python cache ---
+# === do NOT upload ===
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
+*.log
 .ipynb_checkpoints/
 .pytest_cache/
 .mypy_cache/
 
-# --- logs / runtime outputs ---
-logs/
-catboost_info/
-*.log
+# local env / OS
+.DS_Store
 
-# --- trained artifacts / generated datasets ---
-artifacts/
-artifacts*/
-data_prepared/
-*.parquet
+# temp
+catboost_info/tmp/
+logs/*.tmp
 
-# --- raw data (privacy + size) ---
-*.xlsx
-*.csv
+# DO NOT upload patch zip (you can regenerate)
+*patch*.zip
 
-# (如果你确实想上传最终汇总指标表，把下面两行取消注释)
-#!results/metrics*.csv
-#!results/metrics_dl*.csv
-
-# --- reports/plots/results are generated (optional) ---
-reports/
-plots/
-results/
-result.pdf
-
-# --- frontend deps/build ---
-**/node_modules/
-**/dist/
-**/.vite/
+# do not upload shell
+*.sh

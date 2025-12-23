@@ -1,0 +1,16 @@
+\begin{tabular}{lllrrrrrrrrrrrr}
+\toprule
+model & task & split & RMSE & MAE & R2 & train_sec & Accuracy & F1 & PosRate & Brier & ROC_AUC & PR_AUC & Recall@Top5% & Recall@Top10% \\
+\midrule
+mlp_emb & reg & test & 9.623355 & 7.930095 & -0.475713 & 3.893363 & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN \\
+mlp_emb & cls & test & NaN & NaN & NaN & 1.788516 & 0.999568 & 0.000000 & 0.000432 & 0.000432 & 0.000591 & 0.000247 & 0.000000 & 0.000000 \\
+ft_transformer & reg & test & 15.494843 & 14.068526 & -2.825808 & 19.179902 & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN \\
+ft_transformer & cls & test & NaN & NaN & NaN & 4.091675 & 0.999568 & 0.000000 & 0.000432 & 0.000432 & 0.829519 & 0.006075 & 0.571429 & 0.571429 \\
+autoint & reg & test & 30.230743 & 29.201755 & -13.562851 & 16.396854 & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN \\
+autoint & cls & test & NaN & NaN & NaN & 3.482696 & 0.999568 & 0.000000 & 0.000432 & 0.000434 & 0.994946 & 0.137683 & 1.000000 & 1.000000 \\
+deep_cross & reg & test & 19.332226 & 18.009557 & -4.955422 & 2.985477 & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN \\
+deep_cross & cls & test & NaN & NaN & NaN & 1.012712 & 0.999568 & 0.000000 & 0.000432 & 0.000437 & 0.000238 & 0.000247 & 0.000000 & 0.000000 \\
+tabnet & reg & test & 1.812553 & 1.275625 & 0.947648 & 33.458270 & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN \\
+tabnet & cls & test & NaN & NaN & NaN & 7.868875 & 0.999568 & 0.000000 & 0.000432 & 0.000432 & 0.248503 & 0.000358 & 0.000000 & 0.000000 \\
+\bottomrule
+\end{tabular}
